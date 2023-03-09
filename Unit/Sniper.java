@@ -4,14 +4,14 @@ public class Sniper extends Archer {
     // Снайпер
     protected String name;
     
-    public Sniper(String name) {
-        super(150, 150, 4, 3, 12, 30, 30, 5);
+    public Sniper(int x, int y, int teams, int shots, String name) {
+        super(12, 10, 8, 10, 15, 15, 9, x, y, 32, teams);
         this.name = name;
     }
-    @Override
+
     public String getInfo() {
-        return String.format("Герой: %s; Имя: %s. Я - снайпер",
-    this.getClass().getSimpleName(), this.name);
+        return String.format("Команда: %d; Герой: %s; Имя: %s; Скорость: %d. Я - снайпер",
+    teams, this.getClass().getSimpleName(), this.name, speed);
 }
 
 }
